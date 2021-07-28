@@ -1,3 +1,7 @@
+// TODO
+// 1. Delete Question / Delete Answer
+// 2. Implement Search Functionality
+
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
