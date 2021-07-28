@@ -1,0 +1,37 @@
+<%- include("partials/header"); %>
+    <p><%= question.askedByName %></p>
+    <h1><%= question.question %></h1>
+    <p><%= question.date %></p>
+
+    <form action="/questions/<%= question._id %>" method="post">
+        <input type="text" name="answer" placeholder="type your answer here" required>
+        <div>
+            <input type="submit" name="nonAnonymous" class="login-button" value="Submit Answer">
+            <input type="submit" name="anonymous" class="login-button" value="Submit Answer Anonymously">
+        </div>
+    </form>
+    <hr>
+
+    <%if (question.answers.length === 0) {%>
+        <p>0 answers</p>
+    <%} else {%>
+    <%    question.answers.forEach(function (answer) {%>
+            
+                <p><%=answer.answeredByName%></p>
+                <h4><%=answer.answer%></h4>
+                <p><%=answer.date%></p>
+                
+                <form action="/upvotes/<%=question._id%>/<%=answer._id%>" method="post">
+                    <button type="submit"><i class="fal fa-angle-up fa-2x"></i></button>
+                </form>
+                <p><%=answer.votes%> votes</p>
+                <form action="/downvotes/<%=question._id%>/<%=answer._id%>" method="post">
+                    <button type="submit"><i class="fal fa-angle-down fa-2x"></i></button>
+                </form>
+                <hr>
+            
+    <%    });%>
+    <%}%>
+
+<%- include("partials/footer"); %>
+

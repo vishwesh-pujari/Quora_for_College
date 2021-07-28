@@ -1,0 +1,18 @@
+<%- include("partials/header"); %>
+
+<h3>Tips on getting good answers quickly</h3>
+<ul>
+    <li>Make sure your question has not been asked already</li>
+    <li>Keep your question short and to the point</li>
+    <li>Double-check grammar and spelling</li>
+</ul>
+
+<form action="/ask-question" method="post">
+    <input type="text" name="question" placeholder="Type your question here" required>
+    <div>
+        <input type="submit" name="non-anonymous" value="Ask Question" class="btn register-button">
+        <input type="submit" name="anonymous" value="Ask Question Anonymously" class="btn register-button">
+    </div>
+</form>
+
+<%- include("partials/footer"); %>

@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs"); %>
+    
+
+    
+    
+    <%questions.forEach(function (question) {%>
+            <p><%= question.askedByName %></p>
+            <a href="/questions/<%=question._id%>" class="question-links"><h1><%= question.question %></h1></a>
+            <p><%=question.date%></p>
+            <hr>
+        
+    <%});%>
+
+
+    
+<%- include("partials/footer.ejs"); %>

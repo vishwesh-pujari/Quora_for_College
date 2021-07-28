@@ -1,0 +1,46 @@
+<%- include("partials/header"); %>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p>college</p>
+        </div>
+        <div class="col">
+            <p><%=user.college%></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>email</p>
+        </div>
+        <div class="col">
+            <p><%=user.username%></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>name</p>
+        </div>
+        <div class="col">
+            <p><%=user.name%></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>questions asked</p>
+        </div>
+        <div class="col">
+            <p><%=user.questionsAsked%></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p>questions answered</p>
+        </div>
+        <div class="col">
+            <p><%=user.questionsAnswered%></p>
+        </div>
+    </div>
+</div>
+
+<%- include("partials/footer"); %>
