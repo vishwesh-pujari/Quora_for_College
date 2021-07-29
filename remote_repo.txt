@@ -1,0 +1,6 @@
+Pushing on 2 different repositories: heroku and github
+heroku pushes on the master branch
+github pushes on the main branch.
+we have to push on both the branches differently
+before pushing to master: git branch -M master
+before pushing to main: git branch -M main

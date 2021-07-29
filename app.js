@@ -1,6 +1,10 @@
 // TODO
 // 1. Delete Question / Delete Answer
 // 2. Implement Search Functionality
+// 3. Implement 1 2 3 4 pages for questions and answers
+// 4. Implement comments for answers
+// 5. Show all questions and answers in the profile section (not just the count)
+// 6. Implement college registration functionality. So that we can make a API Call to them and validate whether student is of same college or not
 
 require("dotenv").config();
 const express = require("express");
